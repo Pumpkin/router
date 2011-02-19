@@ -5,6 +5,10 @@ class Router < Sinatra::Base
 
   set :root, File.dirname(__FILE__)
   
+  before do
+    response.headers['Cache-Control'] = 'public, max-age=31557600'
+  end
+
   get '/*/?' do
     domain = request.host
     path = request.fullpath
