@@ -13,8 +13,6 @@ class Router < Sinatra::Base
     domain = request.host
     path = request.fullpath
 
-    puts "Routing: #{ [ domain, path ] }"
-
     case domain
       when 'blog.getcloudapp.com'
         redirect "http://blog.getcloud.me#{path}", 301
