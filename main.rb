@@ -13,7 +13,7 @@ class Router < Sinatra::Base
       when 'blog.getcloudapp.com'
         redirect "http://blog.getcloud.me#{path}"
       else
-        'This is something else'
+        redirect 'http://getcloud.me'
     end
   end
   
