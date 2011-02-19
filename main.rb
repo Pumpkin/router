@@ -15,9 +15,9 @@ class Router < Sinatra::Base
 
     case domain
       when 'blog.getcloudapp.com'
-        redirect "http://blog.getcloud.me#{path}"
+        redirect "http://blog.getcloud.me#{path}", 301
       else
-        redirect 'http://getcloud.me'
+        redirect 'http://getcloud.me', 301
     end
   end
   
