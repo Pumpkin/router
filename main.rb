@@ -7,10 +7,11 @@ class Router < Sinatra::Base
   
   get '/*/?' do
     domain = request.host
+    path = request.fullpath
 
     case domain
       when 'blog.getcloudapp.com'
-        redirect 'blog.getcloud.me'
+        redirect "http://blog.getcloud.me#{path}"
       else
         'This is something else'
     end
