@@ -14,16 +14,16 @@ class Router < Sinatra::Base
     path = request.fullpath
 
     case domain
-      when 'blog.getcloudapp.com'
-        redirect "http://blog.getcloud.me#{path}", 301
-      when 'developer.getcloudapp.com'
-        redirect "http://developer.getcloud.me#{path}", 301
-      when 'help.getcloudapp.com'
-        redirect "http://help.getcloud.me", 301
-      when 'support.getcloudapp.com'
-        redirect "http://help.getcloud.me#{path}", 301
+      when 'blog.getcloud.me'
+        redirect "http://blog.getcloudapp.com#{path}", 301
+      when 'developer.getcloud.me'
+        redirect "http://developer.getcloudapp.com#{path}", 301
+      when 'help.getcloud.me'
+        redirect "http://support.getcloudapp.com", 301
+      when 'support.getcloud.me'
+        redirect "http://help.getcloudapp.com#{path}", 301
       else
-        redirect 'http://getcloud.me', 301
+        redirect 'http://getcloudapp.com', 301
     end
   end
   
