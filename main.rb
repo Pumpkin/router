@@ -18,10 +18,8 @@ class Router < Sinatra::Base
         redirect "http://blog.getcloudapp.com#{path}", 301
       when 'developer.getcloud.me'
         redirect "http://developer.getcloudapp.com#{path}", 301
-      when 'help.getcloud.me'
-        redirect "http://support.getcloudapp.com", 301
-      when 'support.getcloud.me'
-        redirect "http://support.getcloudapp.com#{path}", 301
+      when 'support.getcloudapp.com'
+        redirect "http://help.getcloud.me#{path}", 301
       else
         redirect 'http://getcloudapp.com', 301
     end
