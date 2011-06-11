@@ -1,7 +1,5 @@
 source :rubygems
 
 gem 'sinatra' 
-
-group :development do
-  gem 'shotgun'
-end
+gem 'newrelic_rpm', :group => :production
+gem 'shotgun',      :group => :development
