@@ -26,6 +26,8 @@ class Router < Sinatra::Base
         redirect "http://support.getcloudapp.com#{path}", 301
       when 'help.getcloudapp.com'
         redirect "http://support.getcloudapp.com#{path}", 301
+      when 'sparkler.getcloudapp.com'
+        redirect "http://releases.getcloudapp.com/osx/sparkle/stable.xml", 301
       when 'start.getcloudapp.com'
         redirect "http://support.getcloudapp.com/kb/mac/getting-started", 301
       else
