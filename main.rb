@@ -21,7 +21,9 @@ class Router < Sinatra::Base
       when 'blog.getcloud.me'
         redirect "http://blog.getcloudapp.com#{path}", 301
       when 'developer.getcloud.me'
-        redirect "http://developer.getcloudapp.com#{path}", 301
+        redirect "https://github.com/cloudapp/api/blob/master/README.md", 301
+      when 'developer.getcloudapp.com'
+        redirect "https://github.com/cloudapp/api/blob/master/README.md", 301
       when 'help.getcloud.me'
         redirect "http://support.getcloudapp.com#{path}", 301
       when 'help.getcloudapp.com'
