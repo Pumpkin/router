@@ -2,11 +2,6 @@ require 'rubygems'
 require 'sinatra/base'
 
 class Router < Sinatra::Base
-
-  configure :production do
-    require 'newrelic_rpm'
-  end
-
   set :root, File.dirname(__FILE__)
 
   before do
