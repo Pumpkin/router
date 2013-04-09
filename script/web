@@ -1,2 +1,2 @@
 #!/bin/sh
-bundle exec unicorn -I lib -p $PORT -c ./config/unicorn.rb
+unicorn -I lib -p $PORT -c ./config/unicorn.rb
