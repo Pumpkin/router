@@ -13,6 +13,8 @@ class Router < Sinatra::Base
     path = request.fullpath
 
     case domain
+      when 'files.getcloudapp.com'
+        redirect "http://f.cl.ly#{path}", 301
       when 'blog.getcloud.me'
         redirect "http://blog.getcloudapp.com#{path}", 301
       when 'developer.getcloud.me'
