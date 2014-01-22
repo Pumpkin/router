@@ -21,14 +21,13 @@ class Router < Sinatra::Base
         redirect "https://github.com/cloudapp/api/blob/master/README.md", 301
       when 'developer.getcloudapp.com'
         redirect "https://github.com/cloudapp/api/blob/master/README.md", 301
-      when 'help.getcloud.me'
-        redirect "http://support.getcloudapp.com#{path}", 301
-      when 'help.getcloudapp.com'
-        redirect "http://support.getcloudapp.com#{path}", 301
+      when 'help.getcloud.me', 'support.getcloud.me',
+        'help.getcloudapp.com', 'support.getcloudapp.com'
+        redirect "http://www.getcloudapp.com/help#{path}", 301
       when 'sparkler.getcloudapp.com'
         redirect "http://releases.getcloudapp.com/osx/sparkle/stable.xml", 301
       when 'start.getcloudapp.com'
-        redirect "http://support.getcloudapp.com/customer/portal/articles/208713-getting-started", 301
+        redirect "http://www.getcloudapp.com/help/getting-started/", 301
       else
         redirect 'http://getcloudapp.com', 301
     end
