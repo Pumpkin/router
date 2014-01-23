@@ -15,8 +15,8 @@ class Router < Sinatra::Base
     case domain
       when 'files.getcloudapp.com'
         redirect "http://f.cl.ly#{path}", 301
-      when 'blog.getcloud.me'
-        redirect "http://blog.getcloudapp.com#{path}", 301
+      when 'blog.getcloud.me', 'blog.getcloudapp.com'
+        redirect "http://www.getcloudapp.com/blog#{path}", 301
       when 'developer.getcloud.me'
         redirect "https://github.com/cloudapp/api/blob/master/README.md", 301
       when 'developer.getcloudapp.com'
